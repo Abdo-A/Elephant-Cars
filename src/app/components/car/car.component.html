@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <mat-toolbar-row class="toolbar">
+    <span>Elephant Cars</span>
+    <span class="spacer"></span>
+    <button mat-raised-button (click)='onLogOut()'>logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div *ngFor="let car of cars; let i = index;">
+    <div *ngIf="car.id==id">
+      <mat-card class="car-card">
+        <mat-card-header>
+          <mat-card-title><h3>{{car.brand}}</h3></mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{car.imgurl}}" alt="Car Photo">
+        <mat-card-content>
+          <h3>Country: {{car.country}}</h3>
+          <h3>Year: {{car.year}}</h3>
+        </mat-card-content>
+      </mat-card>
+    </div>
+</div>
+<br>
+<div class="back">
+  <button routerLink='/home' mat-raised-button>Back</button>
+</div>

@@ -1,0 +1,42 @@
+<mat-toolbar>
+  <mat-toolbar-row class="toolbar">
+    <span>Elephant Cars</span>
+    <span class="spacer"></span>
+    <button mat-raised-button (click)='onLogOut()'>logout</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<form #userForm='ngForm' (ngSubmit)='onSubmitAddCar(userForm.value)'>
+  Brand
+          <mat-form-field id="i1">
+            <input matInput type="text" name="brand" placeholder="Brand" ngModel [(ngModel)]='brandField'>
+          </mat-form-field> <br><br><br>
+
+
+  Country   
+           <mat-form-field id="i2">
+              <mat-select placeholder="Country" name="country" ngModel>
+                <mat-option *ngFor="let country of countries" value="{{country}}">
+                  {{country}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+
+  <br><br><br>
+  Year  
+      <span class="date-picker">
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" [max]="maxDate" [min]="minDate" placeholder="Choose a year" name="year" ngModel [(ngModel)]='yearField'>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker startView="multi-year" [startAt]="startDate"></mat-datepicker>
+        </mat-form-field>
+      </span>
+        <br><br>
+  Image URL
+          <mat-form-field id="i3">
+            <input matInput type="text" name="imgurl" placeholder="URL" ngModel [(ngModel)]='imgurlField'>
+          </mat-form-field> <br><br>
+
+  <button type="submit" id="sub-btn" mat-raised-button>Save</button> <br><br>
+  <span class="warning">{{warning}}</span>
+</form>

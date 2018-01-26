@@ -1,0 +1,17 @@
+form {
+    margin-left:40vw;
+    margin-top:10vh
+}
+form button{
+    background:#69A84F;
+    margin-left:13vw;
+}
+.date-picker {
+    margin-left:3.5vw;
+}
+#i1{margin-left:2.8vw;}
+#i2{margin-left:2vw;}
+#i3{margin-left:0.6vw;}
+.warning {
+    font-family: fantasy
+}

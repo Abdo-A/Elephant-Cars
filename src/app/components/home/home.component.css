@@ -1,0 +1,36 @@
+.adding button{
+    background:#69A84F;
+    color:#FFF;
+    margin-left: 56vw
+}
+
+.table-container {
+    border-collapse: collapse;
+    width: 40vw;
+    min-width: 300px;
+    min-width:150px;
+    background-color: #FFF2CD;
+    margin:0 auto;
+}
+
+mat-table {
+    min-width: 300px;
+}
+
+mat-cell {
+    cursor: pointer;
+}
+
+#deleteCell button {
+    background: #DD7E6A;
+    color:#FFF;
+    height:22px;
+    line-height: 22px;
+    width:50px;
+}
+
+@media only screen and (max-width: 500px) {
+    .table-container {
+        margin:0;
+    }
+}

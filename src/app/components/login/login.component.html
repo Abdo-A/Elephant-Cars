@@ -1,0 +1,12 @@
+<form #userForm="ngForm" (ngSubmit)="onLogIn(userForm.value)" class="mat-form mat-elevation-z8">
+    <h1>Login</h1>
+    <mat-form-field class="full-width">
+      <input matInput type="text" name="username" placeholder="Username" ngModel>
+    </mat-form-field>
+    <br>
+    <mat-form-field class="full-width">
+      <input matInput type="password" name="password" placeholder="Password" ngModel>
+    </mat-form-field>
+    <button mat-raised-button type="submit">LOGIN</button><br>
+    <span *ngIf="invalid" class="login-warn">Please Enter Valid Email and Password</span>
+  </form>
